@@ -4,7 +4,7 @@ import { Mail, ChevronRight, Menu, X, Cpu, Home, ShieldCheck, Wifi, ExternalLink
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // 第一款風格的配色：明亮橙、深藍灰、淺背景
+  // 配色方案：明亮橙、深藍灰、淺背景
   const theme = {
     primary: 'text-orange-500',
     primaryBg: 'bg-orange-500',
@@ -110,22 +110,48 @@ const Portfolio = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section id="about" className="pt-40 pb-24 px-6">
-        <div className="max-w-4xl mx-auto text-center md:text-left">
-          <h2 className="text-sm font-bold text-orange-500 uppercase tracking-[0.3em] mb-4">UI/UX Designer</h2>
+      {/* Hero Section with Custom Gradient Background */}
+      <section id="about" className="relative pt-48 pb-32 px-6 overflow-hidden">
+        {/* 背景漸層：使用指定的 linear-gradient(166deg, #FFE0B6 0%, #F3FFDA 100%) */}
+        <div 
+          className="absolute inset-0 pointer-events-none" 
+          style={{ 
+            background: 'linear-gradient(166deg, #FFE0B6 0%, #F3FFDA 100%)',
+            mixBlendMode: 'multiply'
+          }}
+        ></div>
+
+        {/* 背景裝飾層 */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, backgroundSize: '30px 30px' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* 正方形 1：右上角大方塊 */}
+          <svg className="absolute top-20 right-[10%] w-24 h-24 text-orange-500/30 animate-[spin_15s_linear_infinite]" viewBox="0 0 100 100">
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="currentColor" strokeWidth="2" />
+          </svg>
+          
+          {/* 正方形 2：中間右側小方塊 */}
+          <svg className="absolute top-1/2 right-[15%] w-8 h-8 text-orange-500/30 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100">
+            <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="3" />
+          </svg>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10 text-center md:text-left">
+          <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.3em] mb-4">UI/UX Designer</h2>
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             讓複雜的功能，<br className="hidden md:block" />
-            變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">直覺。</span>
+            變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
+          <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
             Hi, 我是 Cindy 洪馨黛。在設計時，我花 80% 的時間思考如何簡化流程。我擅長將 AI、IoT 與網通技術轉化為使用者愛不釋手的簡單體驗。
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-medium">
-            <span className="px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:border-orange-200 transition-colors">IoT 智慧家居</span>
-            <span className="px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:border-orange-200 transition-colors">Mesh 系統規劃</span>
-            <span className="px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:border-orange-200 transition-colors">AI 波形偵測應用</span>
-            <span className="px-4 py-2 bg-white border border-slate-200 rounded-full shadow-sm hover:border-orange-200 transition-colors">前端實作 (HTML/CSS)</span>
+            <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">IoT 智慧家居</span>
+            <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">Mesh 系統規劃</span>
+            <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">AI 波形偵測應用</span>
+            <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">前端實作 (HTML/CSS)</span>
           </div>
         </div>
       </section>
@@ -174,17 +200,15 @@ const Portfolio = () => {
         >
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row gap-16 items-start">
-                  {/* 替換後的程式碼 - 顯示真實圖片 */}
-                  {/* Project Visual */}
-                  <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-lg border border-slate-100 group relative overflow-hidden">
-                    {/* 💡 設計師秘訣：這裡會根據 project.id 自動抓取對應的圖片名稱 */}
-                    <img 
-                      src={`/images/${project.id}.png`} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; }}
-                    />
-                  </div>
+              {/* Project Visual */}
+              <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-lg border border-slate-100 group relative overflow-hidden">
+                <img 
+                  src={`/images/${project.id}.png`} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; }}
+                />
+              </div>
 
               {/* Project Content */}
               <div className="w-full md:w-1/2">
@@ -226,9 +250,15 @@ const Portfolio = () => {
                   </div>
                 </div>
 
-                <button className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center shadow-lg shadow-slate-900/10">
+                {/* 更新後的 Figma Deck 連結 */}
+                <a 
+                  href="https://www.figma.com/deck/GCZwMDI9SoSrYBjbTR1iuL" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center shadow-lg shadow-slate-900/10"
+                >
                   查看完整作品介紹 <ExternalLink className="w-4 h-4 ml-2" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
