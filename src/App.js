@@ -145,7 +145,7 @@ const Portfolio = () => {
             變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
           </h1>
           <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
-            Hi, 我是 Cindy 洪馨黛。在設計時，我花 80% 的時間思考如何簡化流程。我擅長將 AI、IoT 與網通技術轉化為使用者愛不釋手的簡單體驗。
+            Hi, 我是 Cindy。在設計時，我花 80% 的時間思考如何簡化流程。我擅長將 硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-medium">
             <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">IoT 智慧家居</span>
