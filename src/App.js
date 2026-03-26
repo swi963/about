@@ -64,7 +64,7 @@ const Portfolio = () => {
     {
       id: "web-industrial",
       title: "Industrial Automation Official Web",
-      category: "Web Design / Coding",
+      category: "Website Design / Coding",
       tag: "品牌視覺重塑",
       description: "以品牌橘色與咖啡色調為主進行設計，廠區照片較複雜，因此以灰階色調呈現、滑過再顯示色彩。",
       features: ["網站地圖規劃", "Sketch 繪製提案", "網站實作 (HTML/CSS via Bootstrap)"],
@@ -73,7 +73,7 @@ const Portfolio = () => {
     {
       id: "web-medical-brand",
       title: "Medical Device Official Web",
-      category: "Web Design / Branding",
+      category: "Website Design / Branding",
       tag: "醫療器材品牌",
       description: "透過降低飽和度與調整紅色比例，展現值得信賴且前衛專業的品牌形象。選用抽象概念素材示意產品功能。",
       features: ["網站地圖規劃", "Sketch 繪製提案", "產品拍攝與文案撰寫", "網站實作 (HTML/CSS via Bootstrap)"],
@@ -82,7 +82,7 @@ const Portfolio = () => {
     {
       id: "web-acloud",
       title: "A-Cloud Official Web Design",
-      category: "Web Design / Cloud Service",
+      category: "Website Design / Cloud Service",
       tag: "擎雲數位科技",
       description: "針對雲端解決方案商設計，以深藍與科技藍為主調，強化安全與專業感，優化雲端服務的資訊展示。 ",
       features: ["視覺風格定義", "響應式介面設計 (RWD)", "資訊架構優化", "UI 標註交付"],
@@ -139,9 +139,9 @@ const Portfolio = () => {
             )}
             <button 
               onClick={() => switchPage('visual')} 
-              className={`${activePage === 'visual' ? 'text-orange-500' : ''} hover:text-orange-500 transition-colors flex items-center`}
+              className={`${activePage === 'visual' ? 'text-orange-500 font-bold' : ''} hover:text-orange-500 transition-colors`}
             >
-              <Globe className="w-4 h-4 mr-1" /> 網頁設計
+              網站設計
             </button>
             <a href="mailto:swi963@gmail.com" className={`px-4 py-2 ${theme.primaryBg} text-white rounded-full ${theme.hoverBg} transition-all shadow-lg shadow-orange-500/20`}>聯絡我</a>
           </div>
@@ -162,7 +162,7 @@ const Portfolio = () => {
             ) : (
               <button onClick={() => switchPage('main')} className="text-left py-2 font-medium">返回首頁</button>
             )}
-            <button onClick={() => switchPage('visual')} className="text-left py-2 font-medium text-orange-500">網頁設計作品</button>
+            <button onClick={() => switchPage('visual')} className={`text-left py-2 font-medium ${activePage === 'visual' ? 'text-orange-500' : ''}`}>網站設計作品</button>
           </div>
         )}
       </nav>
@@ -192,8 +192,8 @@ const Portfolio = () => {
                 <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">IoT 智慧家居</span>
                 <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Mesh 系統規劃</span>
                 <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">AI 波形偵測應用</span>
-                <button onClick={() => switchPage('visual')} className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-bold flex items-center hover:bg-orange-600 transition-colors">
-                  <Globe className="w-4 h-4 mr-2" /> 查看網頁設計
+                <button onClick={() => switchPage('visual')} className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-bold hover:bg-orange-600 transition-colors">
+                  查看網站設計
                 </button>
               </div>
             </div>
@@ -270,15 +270,15 @@ const Portfolio = () => {
           </section>
         </>
       ) : (
-        /* Web Design Page */
+        /* Website Design Page */
         <section className="pt-40 pb-24 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="mb-16">
-              <button onClick={() => switchPage('main')} className="text-slate-400 hover:text-orange-500 mb-4 flex items-center font-bold">
-                <ChevronRight className="w-4 h-4 rotate-180 mr-1" /> 返回 App 作品集
+              <button onClick={() => switchPage('main')} className="text-slate-400 hover:text-orange-500 mb-4 flex items-center font-bold group">
+                <ChevronRight className="w-4 h-4 rotate-180 mr-1 group-hover:-translate-x-1 transition-transform" /> 返回 App 作品集
               </button>
-              <h1 className="text-5xl font-bold mb-4">網頁設計作品</h1>
-              <p className="text-slate-500 text-xl">Official Web Design & System Visuals</p>
+              <h1 className="text-5xl font-bold mb-4">網站設計作品</h1>
+              <p className="text-slate-500 text-xl">Official Website Design & System Visuals</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
@@ -316,7 +316,7 @@ const Portfolio = () => {
                       <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">設計挑戰</h4>
                       <p className="text-sm text-slate-500 italic mb-6">"{project.challenge}"</p>
                       <button className="flex items-center text-sm font-bold hover:text-orange-500 transition-colors">
-                        查看專案圖庫 <Eye className="w-4 h-4 ml-2" />
+                        查看專案圖庫 <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ const Portfolio = () => {
             </div>
 
             <div className="mt-24 p-12 bg-orange-50 rounded-[40px] text-center">
-              <h2 className="text-2xl font-bold mb-4">對網頁設計感興趣？</h2>
+              <h2 className="text-2xl font-bold mb-4">對網站設計感興趣？</h2>
               <p className="text-slate-500 mb-8">除了 UI/UX 流程，我也具備將品牌語彙轉化為網站實作的能力。</p>
               <button onClick={() => switchPage('main')} className="px-8 py-3 bg-white text-orange-600 rounded-full font-bold shadow-sm hover:shadow-md transition-all">
                 看更多 App 的邏輯設計
@@ -348,11 +348,11 @@ const Portfolio = () => {
               onClick={() => switchPage(activePage === 'main' ? 'visual' : 'main')} 
               className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 text-slate-600 rounded-full text-xl font-bold hover:bg-slate-200 transition-all"
             >
-              <Globe className="mr-3" /> {activePage === 'main' ? '查看網頁設計' : '返回 App 作品'}
+              {activePage === 'main' ? '查看網站設計' : '返回 App 作品'}
             </button>
           </div>
           <div className="mt-20 pt-12 border-t border-slate-100 text-slate-400 text-sm tracking-widest">
-            © 2025 CINDY HUNG • DESIGNED WITH INTUITION
+            © 2025 CINDY HONG • DESIGNED WITH INTUITION
           </div>
         </div>
       </footer>
