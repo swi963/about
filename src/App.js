@@ -179,7 +179,7 @@ const Portfolio = () => {
                   <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-lg border border-slate-100 group relative overflow-hidden">
                     {/* 💡 設計師秘訣：這裡會根據 project.id 自動抓取對應的圖片名稱 */}
                     <img 
-                      src={`images/${project.id}.png`} 
+                      src={`/images/${project.id}.png`} 
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; }}
