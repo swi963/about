@@ -174,14 +174,27 @@ const Portfolio = () => {
         >
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row gap-16 items-start">
-              {/* Project Visual */}
-              <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-inner border border-slate-200 group relative overflow-hidden">
-                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent"></div>
-                 <div className="z-10 text-slate-300 flex flex-col items-center group-hover:text-orange-300 transition-colors">
-                    <div className="scale-150">{project.icon}</div>
-                    <span className="mt-4 text-xs font-bold tracking-widest uppercase text-slate-400">[ GUI Mockup Placeholder ]</span>
-                 </div>
-              </div>
+              // {/* Project Visual */}
+              // <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-inner border border-slate-200 group relative overflow-hidden">
+              //    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent"></div>
+              //    <div className="z-10 text-slate-300 flex flex-col items-center group-hover:text-orange-300 transition-colors">
+              //       <div className="scale-150">{project.icon}</div>
+              //       <span className="mt-4 text-xs font-bold tracking-widest uppercase text-slate-400">[ GUI Mockup Placeholder ]</span>
+              //    </div>
+              // </div>
+                  {/* 替換後的程式碼 - 顯示真實圖片 */}
+                  {/* Project Visual */}
+                  <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-lg border border-slate-100 group relative overflow-hidden">
+                    {/* 💡 設計師秘訣：這裡會根據 project.id 自動抓取對應的圖片名稱 */}
+                    <img 
+                      src={`/${project.id}.png`} 
+                      alt={project.title}
+                      {/* 💡 設計師特效：滑鼠移過去時圖片會輕微放大，增加互動感 */}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      {/* 防呆機制：如果圖片讀取失敗，顯示一個簡單的提示 */}
+                      onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; }}
+                    />
+                  </div>
 
               {/* Project Content */}
               <div className="w-full md:w-1/2">
