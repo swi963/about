@@ -20,13 +20,13 @@ const Portfolio = () => {
       title: "Smart Doorbell App",
       category: "IoT / Security",
       tag: "CES 展示作品",
-      description: "針對北美地區設計，優化包裹偵測與安全預警流程。在 50 人大型跨國團隊中負責 App 流程規劃與 Wireframe 製作。",
+      description: "針對北美地區設計，優化包裹偵測與安全預警流程。在 50 人團隊中負責 App 流程規劃與 Wireframe 製作。",
       icon: <Home className="w-6 h-6" />,
       highlight: "解決「包裹遭竊」與「誤判預警」的平衡點",
       details: {
         team: "50人 (含軟硬體、PM、Leader)",
         role: "App 流程規劃、Wireframe 文件製作、交付 GUI 製作",
-        features: ["AI 包裹偵測通知", "雙向語音對講優化", "事件錄影回放介面"],
+        features: ["AI 包裹偵測通知", "自訂偵測區域", "事件紀錄介面"],
         challenge: "在複雜的網路環境下，確保警示通知能即時送達，並讓用戶能快速判斷包裹安全性。"
       }
     },
@@ -35,14 +35,14 @@ const Portfolio = () => {
       title: "Wi-Fi Sensing App",
       category: "AI / Sensing",
       tag: "前瞻技術",
-      description: "利用 Mesh 設備間的波形偵測呼吸、睡眠與動作。將深奧的技術轉換為溫暖且具隱私保護的健康監測體驗。",
+      description: "利用 Mesh 設備間的波形偵測呼吸、睡眠與動作。將抽象技術轉換為溫暖且具隱私保護的健康監測體驗。",
       icon: <Wifi className="w-6 h-6" />,
-      highlight: "無攝影機的隱私偵測技術落地",
+      highlight: "非接觸式生理訊號偵測",
       details: {
-        team: "研發實驗團隊",
+        team: "研發實驗團隊10人",
         role: "UX 互動定義、波形數據視覺化、隱私保護機制設計",
         features: ["呼吸與心跳偵測 UI", "睡眠品質分析報告", "動作偵測安全警報"],
-        challenge: "如何在不使用攝影機的情況下，讓使用者「感知」到偵測正在運作，並建立信任感。"
+        challenge: "針對不喜歡被攝影監控的用戶，提供一種隱私性高的居家安全偵測方式。"
       }
     },
     {
@@ -50,14 +50,14 @@ const Portfolio = () => {
       title: "Cybersecurity & Mesh",
       category: "System / Network",
       tag: "複雜系統",
-      description: "處理 Mesh Router 上的網路安全展示與家長監控。優化 QoS 網速調節邏輯，將複雜設定直覺化。",
+      description: "處理 Mesh Router 上的網路安全展示與家長監控。優化 QoS 網速調節，並結合IoT智慧控制。",
       icon: <ShieldCheck className="w-6 h-6" />,
       highlight: "高負載資訊的層級優化",
       details: {
-        team: "產品開發團隊",
-        role: "介面層級梳理、QoS 邏輯簡化、Design System 維護",
-        features: ["即時網路威脅監控", "家長控制權限管理", "QoS 裝置優先權拖拉排序"],
-        challenge: "將專業的網管功能轉化為家庭用戶也能輕鬆上手的圖形化介面。"
+        team: "產品開發團隊20人",
+        role: "介面層級梳理、智慧控制多功能整合",
+        features: ["即時網路威脅監控", "家長控制權限管理", "QoS 優先權設定"],
+        challenge: "將複雜的網管功能轉化為家庭用戶也能輕鬆上手的圖形化介面。"
       }
     }
   ];
@@ -145,7 +145,7 @@ const Portfolio = () => {
             變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
           </h1>
           <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
-            Hi, 我是 Cindy。在設計時，我花 80% 的時間思考如何簡化流程。我擅長將 硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
+            Hi, 我是 Cindy。在設計時，我花 80% 以上的時間思考如何簡化流程。我擅長將 硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm font-medium">
             <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full shadow-sm hover:border-orange-200 transition-colors">IoT 智慧家居</span>
@@ -275,7 +275,7 @@ const Portfolio = () => {
           </blockquote>
           <div className="h-1.5 w-24 bg-orange-500 mx-auto mb-12 rounded-full"></div>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            我不致力於增加操作負擔，而是致力於精確的簡化。
+            我專注於簡化複雜流程，並優化使用者體驗。
             使用者應該只需插電上線，所有複雜的技術都應在後台靜默且高效地運作。
           </p>
         </div>
@@ -296,7 +296,7 @@ const Portfolio = () => {
             <Mail className="mr-3" /> swi963@gmail.com
           </a>
           <div className="mt-20 pt-12 border-t border-slate-100 text-slate-400 text-sm tracking-widest">
-            © 2025 CINDY HUNG • DESIGNED WITH INTUITION
+            © 2025 CINDY HONG • DESIGNED WITH INTUITION
           </div>
         </div>
       </footer>
