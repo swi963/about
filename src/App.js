@@ -174,14 +174,6 @@ const Portfolio = () => {
         >
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row gap-16 items-start">
-              // {/* Project Visual */}
-              // <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-inner border border-slate-200 group relative overflow-hidden">
-              //    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent"></div>
-              //    <div className="z-10 text-slate-300 flex flex-col items-center group-hover:text-orange-300 transition-colors">
-              //       <div className="scale-150">{project.icon}</div>
-              //       <span className="mt-4 text-xs font-bold tracking-widest uppercase text-slate-400">[ GUI Mockup Placeholder ]</span>
-              //    </div>
-              // </div>
                   {/* 替換後的程式碼 - 顯示真實圖片 */}
                   {/* Project Visual */}
                   <div className="w-full md:w-1/2 aspect-video bg-white rounded-3xl flex items-center justify-center shadow-lg border border-slate-100 group relative overflow-hidden">
