@@ -181,9 +181,7 @@ const Portfolio = () => {
                     <img 
                       src={`/${project.id}.png`} 
                       alt={project.title}
-                      {/* 💡 設計師特效：滑鼠移過去時圖片會輕微放大，增加互動感 */}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      {/* 防呆機制：如果圖片讀取失敗，顯示一個簡單的提示 */}
                       onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Image+Not+Found'; }}
                     />
                   </div>
