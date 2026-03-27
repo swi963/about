@@ -127,6 +127,7 @@ const Portfolio = () => {
   };
 
   return (
+    <Analytics />
     <div className={`min-h-screen ${theme.bg} ${theme.dark} font-sans selection:bg-orange-100 selection:text-orange-600 transition-colors duration-500`}>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
