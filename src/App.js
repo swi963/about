@@ -186,15 +186,12 @@ const Portfolio = () => {
                 變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
               </h1>
               <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
-                Hi, 我是 Cindy。在設計時，我花 80% 以上的時間思考如何簡化流程。我擅長將 硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
+                Hi, 我是 Cindy。在設計時，我花 80% 以上的時間思考如何簡化流程。我擅長將硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">IoT 智慧家居</span>
-                <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Mesh 系統規劃</span>
-                <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">AI 波形偵測應用</span>
-                <button onClick={() => switchPage('visual')} className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-bold hover:bg-orange-600 transition-colors">
-                  查看網站設計
-                </button>
+                <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Wi-Fi Sensing 偵測應用</span>
+                <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Mesh 介面規劃</span>
               </div>
             </div>
           </section>
@@ -204,7 +201,7 @@ const Portfolio = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center md:text-left mb-16">
                 <h2 className="text-3xl font-bold mb-4">精選 App 專案 (2022-2025)</h2>
-                <p className="text-slate-500">針對跨國團隊合作與 IoT 產品研發，著重互動流程與系統邏輯。</p>
+                <p className="text-slate-500">針對跨團隊合作與 IoT 產品研發，著重互動流程與系統邏輯。</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
                 {appProjects.map((project) => (
