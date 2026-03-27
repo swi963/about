@@ -364,6 +364,7 @@ const Portfolio = () => {
           </div>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 };
