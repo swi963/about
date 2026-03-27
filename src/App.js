@@ -5,6 +5,9 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState('main'); // 'main' or 'visual'
 
+  // Figma 簡報連結
+  const figmaLink = "https://www.figma.com/deck/GCZwMDI9SoSrYBjbTR1iuL";
+
   // 配色方案
   const theme = {
     primary: 'text-orange-500',
@@ -66,7 +69,7 @@ const Portfolio = () => {
       title: "Industrial Automation Official Web",
       category: "Website Design / Coding",
       tag: "品牌視覺重塑",
-      description: "以品牌橘色與咖啡色調為主進行設計，廠區照片較複雜，因此以灰階色調呈現、滑過再顯示色彩。",
+      description: "以 brand 橘色與咖啡色調為主進行設計，廠區照片較複雜，因此以灰階色調呈現、滑過再顯示色彩。",
       features: ["網站地圖規劃", "Sketch 繪製提案", "網站實作 (HTML/CSS via Bootstrap)"],
       challenge: "如何在傳統工業品牌中導入現代感的視覺語彙，並平衡複雜的實景照片。"
     },
@@ -81,10 +84,10 @@ const Portfolio = () => {
     },
     {
       id: "web-acloud",
-      title: "A-Cloud Official Web Design",
+      title: "Clouder Official Web Design",
       category: "Website Design / Cloud Service",
       tag: "擎雲數位科技",
-      description: "針對雲端解決方案商設計，以深藍與科技藍為主調，強化安全與專業感，優化雲端服務的資訊展示。 ",
+      description: "針對雲端解決方案商 Clouder 設計，以深藍與科技藍為主調，強化安全與專業感，優化雲端服務的資訊展示。 ",
       features: ["視覺風格定義", "響應式介面設計 (RWD)", "資訊架構優化", "UI 標註交付"],
       challenge: "將抽象的「雲端服務」與「數據安全」具象化為易於理解的圖像與資訊方塊。"
     },
@@ -116,6 +119,10 @@ const Portfolio = () => {
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  const openFigma = () => {
+    window.open(figmaLink, '_blank');
   };
 
   return (
@@ -243,9 +250,9 @@ const Portfolio = () => {
                       <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">核心挑戰</h4>
                       <p className="text-slate-600 leading-relaxed font-medium text-lg border-l-4 border-orange-200 pl-6">{project.details.challenge}</p>
                     </div>
-                    <a href="https://www.figma.com/deck/GCZwMDI9SoSrYBjbTR1iuL" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center">
+                    <button onClick={openFigma} className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center">
                       查看完整作品介紹 <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -281,14 +288,14 @@ const Portfolio = () => {
             <div className="grid md:grid-cols-2 gap-12">
               {visualProjects.map((project, idx) => (
                 <div key={project.id} className="group flex flex-col">
-                  <div className="aspect-video bg-slate-200 rounded-3xl overflow-hidden mb-6 relative shadow-sm border border-slate-100">
+                  {/* Website Image Container */}
+                  <div className="aspect-video bg-slate-200 rounded-3xl overflow-hidden mb-6 relative shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-500">
                     <img 
                       src={`/images/${project.id}.png`} 
                       alt={project.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      onError={(e) => { e.target.src='https://via.placeholder.com/1200x800?text=Web+Design+Project'; }}
+                      onError={(e) => { e.target.src='https://via.placeholder.com/1920x1080?text=Web+Design+Project'; }}
                     />
-                    <div className="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/10 transition-colors pointer-events-none"></div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
@@ -312,8 +319,11 @@ const Portfolio = () => {
                     <div className="mt-auto">
                       <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">設計挑戰</h4>
                       <p className="text-sm text-slate-500 italic mb-6">"{project.challenge}"</p>
-                      <button className="flex items-center text-sm font-bold hover:text-orange-500 transition-colors">
-                        查看專案圖庫 <ArrowRight className="w-4 h-4 ml-2" />
+                      <button 
+                        onClick={openFigma}
+                        className="flex items-center text-sm font-bold hover:text-orange-500 transition-colors"
+                      >
+                        看其他作品 <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
