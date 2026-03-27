@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import React, { useState, useEffect } from 'react';
 import { Mail, ChevronRight, Menu, X, Cpu, Home, ShieldCheck, Wifi, ExternalLink, Users, Layout, Smartphone, ArrowRight, Palette, Globe, Eye } from 'lucide-react';
 
