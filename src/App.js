@@ -340,7 +340,7 @@ const Portfolio = () => {
                 <h2 className="text-2xl font-bold mb-4">對網站設計感興趣？</h2>
                 <p className="text-slate-500 mb-8">除了 UI/UX 流程，我也具備將品牌語彙轉化為網站實作的能力。如有任何設計案件需求，歡迎與我聯繫。</p>
                   <a href="mailto:d3find.cindy@gmail.com" className="px-8 py-3 bg-white text-orange-600 rounded-full font-bold shadow-sm hover:shadow-md transition-all">
-                <Mail className="mr-3" /> 設計找 Cindy
+                設計找 Cindy
               </a>
               </div>
             </div>
