@@ -122,6 +122,19 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
 
+  const goToSection = (id) => {
+    if (activePage !== 'main') {
+      // 先切回首頁，再滾動到目標區塊
+      setActivePage('main');
+      setIsMenuOpen(false);
+      setTimeout(() => {
+        scrollTo(id);
+      }, 240);
+      return;
+    }
+    scrollTo(id);
+  };
+
   const openFigma = () => {
     window.open(figmaLink, '_blank');
   };
@@ -140,15 +153,10 @@ const Portfolio = () => {
             </div>
             
             <div className="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest text-slate-500">
-              {activePage === 'main' ? (
-                <>
-                  <button onClick={() => scrollTo('about')} className="hover:text-orange-500 transition-colors">關於我</button>
-                  <button onClick={() => scrollTo('projects')} className="hover:text-orange-500 transition-colors">App 作品集</button>
-                  <button onClick={() => scrollTo('philosophy')} className="hover:text-orange-500 transition-colors">設計哲學</button>
-                </>
-              ) : (
-                <button onClick={() => switchPage('main')} className="hover:text-orange-500 transition-colors">返回首頁</button>
-              )}
+              <>
+                <button onClick={() => goToSection('about')} className="hover:text-orange-500 transition-colors">關於我</button>
+                <button onClick={() => goToSection('projects')} className="hover:text-orange-500 transition-colors">App 作品集</button>
+              </>
               <button 
                 onClick={() => switchPage('visual')} 
                 className={`${activePage === 'visual' ? 'text-orange-500 font-bold' : ''} hover:text-orange-500 transition-colors`}
@@ -166,14 +174,8 @@ const Portfolio = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden bg-white border-b border-slate-200 p-6 flex flex-col space-y-4 shadow-xl">
-              {activePage === 'main' ? (
-                <>
-                  <button onClick={() => scrollTo('about')} className="text-left py-2 font-medium">關於我</button>
-                  <button onClick={() => scrollTo('projects')} className="text-left py-2 font-medium">App 作品集</button>
-                </>
-              ) : (
-                <button onClick={() => switchPage('main')} className="text-left py-2 font-medium">返回首頁</button>
-              )}
+              <button onClick={() => goToSection('about')} className="text-left py-2 font-medium">關於我</button>
+              <button onClick={() => goToSection('projects')} className="text-left py-2 font-medium">App 作品集</button>
               <button onClick={() => switchPage('visual')} className={`text-left py-2 font-medium ${activePage === 'visual' ? 'text-orange-500' : ''}`}>網站設計作品</button>
             </div>
           )}
@@ -256,7 +258,7 @@ const Portfolio = () => {
                         <p className="text-slate-600 leading-relaxed font-medium text-lg border-l-4 border-orange-200 pl-6">{project.details.challenge}</p>
                       </div>
                       <button onClick={openFigma} className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center">
-                        查看完整作品介紹 <ExternalLink className="w-4 h-4 ml-2" />
+                        查看完整作品簡報 <ExternalLink className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
@@ -326,7 +328,7 @@ const Portfolio = () => {
                         <p className="text-sm text-slate-500 italic mb-6">"{project.challenge}"</p>
                         <button 
                           onClick={openFigma}
-                          className="flex items-center text-sm font-bold hover:text-orange-500 transition-colors"
+                          className="hidden flex items-center text-sm font-bold hover:text-orange-500 transition-colors"
                         >
                           看其他作品 <ArrowRight className="w-4 h-4 ml-2" />
                         </button>
