@@ -1,6 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import Mesh from './Mesh';
+import Doorbell from './Doorbell';
+import Sensing from './Sensing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+const path = window.location.pathname.replace(/\/+$|^$/g, '').toLowerCase();
+
+if (
+  path === '/mesh' ||
+  path === '/mesh.html' ||
+  path === '/cybersecurity-mesh' ||
+  path === '/cybersecurity-mesh.html'
+) {
+  root.render(<Mesh />);
+} else if (path === '/doorbell' || path === '/doorbell.html') {
+  root.render(<Doorbell />);
+} else if (path === '/sensing' || path === '/sensing.html') {
+  root.render(<Sensing />);
+} else {
+  root.render(<App />);
+}

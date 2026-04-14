@@ -22,44 +22,47 @@ const Portfolio = () => {
   const appProjects = [
     {
       id: "doorbell",
+      route: "/doorbell",
       title: "Smart Doorbell App",
       category: "IoT / Security",
       tag: "CES 展示作品",
-      description: "針對北美地區設計，優化包裹偵測與安全預警流程。在 50 人團隊中負責 App 流程規劃與 Wireframe 製作。",
+      description: "針對北美地區設計，優化包裹偵測與安全預警流程。負責 App 流程規劃與 Wireframe 製作。",
       icon: <Home className="w-6 h-6" />,
       details: {
         team: "50人 (含軟硬體、PM、Leader)",
-        role: "App 流程規劃、Wireframe 文件製作、交付 GUI 製作",
+        role: "App 流程規劃、Wireframe 文件製作",
         features: ["AI 包裹偵測通知", "自訂偵測區域", "事件紀錄介面"],
-        challenge: "在複雜的網路環境下，確保警示通知能即時送達，並讓用戶能快速判斷包裹安全性。"
+        challenge: "針對北美當地實際使用情境，保護私人包裹的安全，並透過App遠端提供即時回應機制。"
       }
     },
     {
       id: "sensing",
+      route: "/sensing",
       title: "Wi-Fi Sensing App",
       category: "AI / Sensing",
       tag: "前瞻技術",
-      description: "利用 Mesh 設備間的波形偵測呼吸、睡眠與動作。將抽象技術轉換為溫暖且具隱私保護的健康監測體驗。",
+      description: "將抽象技術轉換為溫暖且具隱私保護的健康監測體驗。優化使用流程，並改善介面設計。",
       icon: <Wifi className="w-6 h-6" />,
       details: {
         team: "研發實驗團隊 10 人",
-        role: "UX 互動定義、波形數據視覺化、隱私保護機制設計",
+        role: "App 流程規劃、Wireframe 文件製作",
         features: ["呼吸與心跳偵測 UI", "睡眠品質分析報告", "動作偵測安全警報"],
-        challenge: "針對不喜歡被攝影監控的用戶，提供一種隱私性高的居家安全偵測方式。"
+        challenge: "將兩種不同應用情境（健康監測與安全警報）整合在同一 App 中，並確保使用者能夠輕鬆理解與使用這些複雜的感測功能。"
       }
     },
     {
       id: "mesh",
-      title: "Cybersecurity & Mesh",
+      route: "/mesh",
+      title: "Mesh router",
       category: "System / Network",
       tag: "複雜系統",
-      description: "處理 Mesh Router 上的網路安全展示與家長監控。優化 QoS 網速調節，並結合 IoT 智慧控制。",
+      description: "整合多個不同開發團隊與產品，規劃出完整的Mesh router產品。",
       icon: <ShieldCheck className="w-6 h-6" />,
       details: {
-        team: "產品開發團隊 20 人",
-        role: "介面層級梳理、智慧控制多功能整合",
+        team: "4個開發團隊約 20 人",
+        role: "App整合提案、流程規劃、UI 介面設計",
         features: ["即時網路威脅監控", "家長控制權限管理", "QoS 優先權設定"],
-        challenge: "將複雜的網管功能轉化為家庭用戶也能輕鬆上手的圖形化介面。"
+        challenge: "結合多個不同開發團隊與產品，規劃出完整的Mesh router產品，減少每年需重複開發與維護的時間。"
       }
     }
   ];
@@ -138,6 +141,26 @@ const Portfolio = () => {
   const openFigma = () => {
     window.open(figmaLink, '_blank');
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const id = hash.replace('#', '');
+    const timer = setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -225,7 +248,7 @@ const Portfolio = () => {
                       <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                       <p className="text-slate-500 text-sm leading-relaxed mb-6">{project.description}</p>
                       <button onClick={() => scrollTo(`detail-${project.id}`)} className="mt-4 flex items-center text-sm font-bold text-orange-600 group-hover:translate-x-2 transition-transform">
-                        查看專案細節 <ArrowRight className="w-4 h-4 ml-1" />
+                        詳細介紹 <ArrowRight className="w-4 h-4 ml-1" />
                       </button>
                     </div>
                   ))}
@@ -257,8 +280,8 @@ const Portfolio = () => {
                         <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">核心挑戰</h4>
                         <p className="text-slate-600 leading-relaxed font-medium text-lg border-l-4 border-orange-200 pl-6">{project.details.challenge}</p>
                       </div>
-                      <button onClick={openFigma} className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center">
-                        查看完整作品簡報 <ExternalLink className="w-4 h-4 ml-2" />
+                      <button onClick={() => { window.location.href = project.route; }} className="px-8 py-3 bg-slate-900 text-white rounded-full font-bold hover:bg-orange-500 transition-all inline-flex items-center">
+                        查看完整作品 <ArrowRight className="w-4 h-4 ml-2" />
                       </button>
                     </div>
                   </div>
