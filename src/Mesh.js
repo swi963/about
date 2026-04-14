@@ -49,7 +49,7 @@ const Mesh = () => {
             <p className="text-sm uppercase tracking-[0.35em] text-orange-500 mb-4">Design Process Showcase</p>
             <h1 className="text-5xl sm:text-6xl font-bold leading-tight">Mesh router</h1>
             <p className="mt-6 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              以下展示流程中主要的三個階段：Research, Prototype / Wireframe & Final UI Design。每個階段都包含了關鍵的設計決策與背後的思考過程，逐步構建出符合期望的產品體驗。
+              本專案從產品整合、Prototype建立到最終的UI設計，說明我在團隊中負責的角色與如何和工程團隊溝通的過程。
             </p>
           </div>
         </header>
@@ -58,10 +58,9 @@ const Mesh = () => {
           <div className="grid lg:grid lg:grid-cols-[1.2fr_1.8fr] gap-6 lg:gap-10 items-center p-6 lg:p-10">
             <div>
               <p className="text-sm uppercase tracking-[0.35em] text-orange-500 mb-4">01 Research</p>
-              <h2 className="text-3xl font-bold mb-6">洞察與使用者研究</h2>
+              <h2 className="text-3xl font-bold mb-6">產品整合</h2>
               <p className="text-slate-600 leading-relaxed">
-                研究階段聚焦於使用者需求、行為模式與痛點，透過訪談與競品分析整理出關鍵機會。
-                我們將複雜的網路安全與家長監控需求，轉化為更易理解的使用情境與需求地圖。
+                本專案整合了三年來多個Mesh相關的軟體應用，透過消費者的實際需求來規劃產品，旨在讓抽象的概念能更落地實踐在市場上。
               </p>
             </div>
             <div className="overflow-hidden rounded-[32px] bg-slate-100 aspect-[3/2]">
@@ -78,10 +77,9 @@ const Mesh = () => {
           <div className="grid lg:grid-cols-[1.8fr_1.2fr] gap-6 lg:gap-10 items-center p-6 lg:p-10">
             <div className="order-1 lg:order-2">
               <p className="text-sm uppercase tracking-[0.35em] text-orange-500 mb-4">02 Prototype / Wireframe</p>
-              <h2 className="text-3xl font-bold mb-6">線框與原型驗證</h2>
+              <h2 className="text-3xl font-bold mb-6">Prototype建立</h2>
               <p className="text-slate-600 leading-relaxed">
-                在這個階段我們快速構建 Wireframe 與互動原型，驗證資訊架構與使用流程。
-                透過多次迭代，讓功能分布更合理、操作更直覺，並確保使用者在複雜情境中仍能快速完成任務。
+                透過Prototype模擬App實際操作，確認流程後再建立Wireframe開發文件，與工程人員保持良好溝通，確保設計與開發能符合使用者需求與產品目標。
               </p>
             </div>
             <div className="order-2 lg:order-1">
@@ -125,8 +123,7 @@ const Mesh = () => {
               <p className="text-sm uppercase tracking-[0.35em] text-orange-500 mb-4">03 Final Mobile UI Design</p>
               <h2 className="text-3xl font-bold mb-6">UI 介面設計</h2>
               <p className="text-slate-600 leading-relaxed">
-                最終 UI 以清晰視覺階層與合理排版為核心，讓使用者在手機上也能快速掌握網路狀態與安全警示。
-                配色與圖示搭配強調信任感，並保留足夠空間讓使用者專注於重要資訊。
+                在設計上將每個功能依照不同權重擺放在適當位置，並保留足夠空間讓使用者專注於重要資訊。
               </p>
               <p className="mt-4 text-sm text-slate-500">
                 第二個影片為子專案 Cybersecurity App 的 UI 設計展示。
