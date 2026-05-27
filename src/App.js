@@ -138,11 +138,11 @@ const Portfolio = () => {
 
           <div className="max-w-4xl mx-auto relative z-10 text-center md:text-left">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.3em] mb-4">UI/UX Designer</h2>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-medium mb-8 leading-tight">
               讓複雜的功能，<br className="hidden md:block" />
               變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
             </h1>
-            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0 font-light">
+            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
               Hi, 我是 Cindy。我相信好的設計來自持續的對話——從產品定位到流程細節，我習慣與團隊反覆溝通，將抽象的需求梳理成清晰易懂的體驗。
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
@@ -185,18 +185,18 @@ const Portfolio = () => {
         ))}
 
         <section id="philosophy" className="py-24 px-6 text-slate-700 relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(166deg, #DBEAFE 0%, #EDE9FE 100%)', mixBlendMode: 'multiply' }}></div>
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(166deg, #BFDBFE 0%, #DDD6FE 100%)', mixBlendMode: 'multiply' }}></div>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, backgroundSize: '30px 30px' }}></div>
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-orange-500/80 font-bold tracking-[0.4em] mb-12 uppercase">Design Philosophy</h2>
-            <blockquote className="text-2xl md:text-4xl font-extralight italic leading-loose mb-12 text-slate-700 max-w-3xl mx-auto">
+            <blockquote className="text-3xl md:text-5xl italic leading-loose mb-12 text-slate-700 max-w-3xl mx-auto">
               "最好的設計是感覺不到設計。<br />
               真正的智慧，應體現在<span className="text-orange-500/80">零干涉</span>的順暢體驗。"
             </blockquote>
-            <p className="text-slate-500 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-              這是我一直在追求的方向。我喜歡思考如何簡化複雜的流程，不只是讓介面看起來簡單，而是讓使用者不需要多想，就能順著直覺走下去。
+            <p className="text-slate-500 text-xl max-w-xl mx-auto leading-relaxed">
+              我喜歡思考如何簡化複雜的流程，不只是讓介面看起來簡單，而是讓使用者不需要多想，就能順著直覺走下去。
             </p>
           </div>
         </section>
