@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import React, { useState } from 'react';
-import { Mail, ChevronRight, Menu, X } from 'lucide-react';
+import { ChevronRight, Menu, X } from 'lucide-react';
 
 const Visual = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ const Visual = () => {
     id: "web-skgas",
     title: "欣高瓦斯官網改版",
     category: "Website Redesign / Before & After",
-    tag: "官網改版",
+    tag: "官網設計",
     description: "聚焦資訊重整與拍照報度功能優化，讓使用者更快找到常用服務，並提升整體品牌專業度與可讀性。",
     beforeImage: "/images/sg_before.png",
     afterImage: "/images/sg_after.png",
@@ -23,7 +23,7 @@ const Visual = () => {
       id: "web-industrial",
       title: "Industrial Automation Official Web",
       category: "Website Design / Coding",
-      tag: "品牌視覺重塑",
+      tag: "官網設計",
       description: "以 brand 橘色與咖啡色調為主進行設計，廠區照片較複雜，因此以灰階色調呈現、滑過再顯示色彩。",
       features: ["網站地圖規劃", "Sketch 繪製提案", "網站實作 (HTML/CSS via Bootstrap)"],
       challenge: "如何在傳統工業品牌中導入現代感的視覺語彙，並平衡複雜的實景照片。"
@@ -32,7 +32,7 @@ const Visual = () => {
       id: "web-medical-brand",
       title: "Medical Device Official Web",
       category: "Website Design / Branding",
-      tag: "醫療器材品牌",
+      tag: "官網設計",
       description: "透過降低飽和度與調整紅色比例，展現值得信賴且前衛專業的品牌形象。選用抽象概念素材示意產品功能。",
       features: ["網站地圖規劃", "Sketch 繪製提案", "產品拍攝與文案撰寫", "網站實作 (HTML/CSS via Bootstrap)"],
       challenge: "醫療品牌需兼具「信任感」與「前衛感」，色彩與素材的挑選至關重要。"
@@ -41,7 +41,7 @@ const Visual = () => {
       id: "web-acloud",
       title: "Clouder Official Web Design",
       category: "Website Design / Cloud Service",
-      tag: "擎雲數位科技",
+      tag: "官網設計, CIS",
       description: "針對雲端解決方案商 Clouder 設計，以深藍與科技藍為主調，強化安全與專業感，優化雲端服務的資訊展示。 ",
       features: ["視覺風格定義", "響應式介面設計 (RWD)", "資訊架構優化", "UI 標註交付"],
       challenge: "將抽象的「雲端服務」與「數據安全」具象化為易於理解的圖像與資訊方塊。"
@@ -50,7 +50,7 @@ const Visual = () => {
       id: "web-hospital",
       title: "Hospital UGY System Platform",
       category: "UI Design / Internal System",
-      tag: "奇美醫院專案",
+      tag: "官網設計, 系統介面",
       description: "針對醫學生歷程設計的管理平台，將繁瑣的學生歷程數據轉化為易於管理與檢視的資訊儀表板。",
       features: ["後台系統 UI 設計", "使用者路徑規劃", "資訊層級梳理"],
       challenge: "醫護人員工作繁忙，介面必須極致簡化且資訊明確，減少搜尋資料的時間。"
@@ -59,7 +59,7 @@ const Visual = () => {
       id: "pc-tomolyze",
       title: "PET影像辨識軟體",
       category: "Medical Software / UI Design",
-      tag: "醫療影像系統",
+      tag: "系統介面",
       description: "正子斷層掃描(PET)的影像閱讀軟體，提供醫生操作圈選病灶與撰寫報告。LOGO已註冊商標，因此有針對灰階效果與暗色背景做調整。",
       features: ["影像檢視介面規劃", "資訊層級整理", "操作動線優化", "Logo設計"],
       challenge: "在專業醫療情境中平衡高資訊密度與操作直覺性，協助使用者快速定位重點影像。"
@@ -153,26 +153,14 @@ const Visual = () => {
                 </div>
 
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-full uppercase tracking-widest">{featuredProject.tag}</span>
-                    <span className="text-orange-500 font-bold text-xs uppercase tracking-widest">{featuredProject.category}</span>
+                  <div className="mb-4">
+                    <span className="px-3 py-1 bg-slate-200 text-slate-600 text-xs font-bold rounded-full uppercase tracking-widest">{featuredProject.tag}</span>
                   </div>
-                  <h3 className="text-3xl font-bold mb-4">{featuredProject.title}</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">{featuredProject.description}</p>
-
-                  <div className="bg-white p-6 rounded-2xl border border-slate-100 mb-8">
-                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">負責內容：</h4>
-                    <ul className="grid grid-cols-2 gap-2">
-                      {featuredProject.features.map((item, i) => (
-                        <li key={i} className="text-sm flex items-center text-slate-500">
-                          <div className="w-1 h-1 bg-orange-500 rounded-full mr-2"></div> {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{featuredProject.title}</h3>
 
                   <div className="mt-auto">
-                    <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">設計挑戰</h4>
+                    <hr className="border-slate-200 mb-4" />
+                    <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">concept</h4>
                     <p className="text-sm text-slate-500 italic mb-6">"{featuredProject.challenge}"</p>
                     <a
                       href="https://shinkao.vercel.app/"
@@ -197,26 +185,30 @@ const Visual = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="px-3 py-1 bg-slate-100 text-slate-500 text-xs font-bold rounded-full uppercase tracking-widest">{project.tag}</span>
-                      <span className="text-orange-500 font-bold text-xs uppercase tracking-widest">{project.category}</span>
-                    </div>
-                    <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
-                    <p className="text-slate-600 mb-6 leading-relaxed">{project.description}</p>
+                    <div className="mb-4 flex flex-wrap gap-2">
+                      {project.tag.split(',').map((tagItem) => {
+                        const label = tagItem.trim();
+                        const colorClass =
+                          label === '系統介面'
+                            ? 'bg-green-100 text-green-700'
+                            : label === 'CIS'
+                              ? 'bg-orange-100 text-orange-600'
+                              : label === '官網設計'
+                                ? 'bg-slate-200 text-slate-600'
+                              : 'bg-orange-100 text-orange-600';
 
-                    <div className="bg-white p-6 rounded-2xl border border-slate-100 mb-8">
-                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">負責內容：</h4>
-                      <ul className="grid grid-cols-2 gap-2">
-                        {project.features.map((item, i) => (
-                          <li key={i} className="text-sm flex items-center text-slate-500">
-                            <div className="w-1 h-1 bg-orange-500 rounded-full mr-2"></div> {item}
-                          </li>
-                        ))}
-                      </ul>
+                        return (
+                          <span key={label} className={`px-3 py-1 text-xs font-bold rounded-full uppercase tracking-widest ${colorClass}`}>
+                            {label}
+                          </span>
+                        );
+                      })}
                     </div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">{project.title}</h3>
 
                     <div className="mt-auto">
-                      <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">設計挑戰</h4>
+                      <hr className="border-slate-200 mb-4" />
+                      <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-2">concept</h4>
                       <p className="text-sm text-slate-500 italic mb-6">"{project.challenge}"</p>
                     </div>
                   </div>
@@ -224,26 +216,19 @@ const Visual = () => {
               ))}
             </div>
 
-            <div className="mt-24 p-12 bg-orange-50 rounded-[40px] text-center">
-              <h2 className="text-2xl font-bold mb-4">對網站設計感興趣？</h2>
-              <p className="text-slate-500 mb-8">除了 UI/UX 流程，我也具備將品牌語彙轉化為網站實作的能力。如有任何設計案件需求，歡迎與我聯繫。</p>
-              <a href="mailto:d3find.cindy@gmail.com" className="px-8 py-3 bg-white text-orange-600 rounded-full font-bold shadow-sm hover:shadow-md transition-all">
-                設計找 Cindy
-              </a>
-            </div>
           </div>
         </section>
 
         <footer className="py-24 px-6 bg-white border-t border-slate-100">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">與我合作？</h2>
-            <p className="text-slate-500 mb-12 text-lg">目前正在尋找 UI/UX 設計的相關挑戰。如果你對我的作品感興趣，歡迎來信討論。</p>
+            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+            <p className="text-slate-500 mb-12 text-lg">如果你有小型網頁的客製化需求，也可以找我談外包合作——歡迎與我聯繫！</p>
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
-              <a href="mailto:swi963@gmail.com" className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white rounded-full text-xl font-bold hover:bg-orange-600 transition-all shadow-xl shadow-orange-500/20">
-                <Mail className="mr-3" /> swi963@gmail.com
+              <a href="mailto:d3find.cindy@gmail.com" className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white rounded-full text-xl font-bold hover:bg-orange-600 transition-all shadow-xl shadow-orange-500/20">
+                設計找 Cindy
               </a>
               <a href="/" className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 text-slate-600 rounded-full text-xl font-bold hover:bg-slate-200 transition-all">
-                返回 App 作品
+                查看APP作品
               </a>
             </div>
             <div className="mt-20 pt-12 border-t border-slate-100 text-slate-400 text-sm tracking-widest">

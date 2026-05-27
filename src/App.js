@@ -14,18 +14,18 @@ const Portfolio = () => {
 
   const appProjects = [
     {
-      id: "doorbell",
-      route: "/doorbell",
-      title: "Smart Doorbell App",
-      category: "IoT / Security",
-      tag: "CES 展示作品",
-      description: "針對北美地區設計，優化包裹偵測與安全預警流程。負責 App 流程規劃與 Wireframe 製作。",
-      icon: <Home className="w-6 h-6" />,
+      id: "mesh",
+      route: "/mesh",
+      title: "Mesh router",
+      category: "System / Network",
+      tag: "複雜系統",
+      description: "整合多個不同開發團隊與產品，規劃出完整的Mesh router產品。",
+      icon: <ShieldCheck className="w-6 h-6" />,
       details: {
-        team: "50人 (含軟硬體、PM、Leader)",
-        role: "App 流程規劃、Wireframe 文件製作",
-        features: ["AI 包裹偵測通知", "自訂偵測區域", "事件紀錄介面"],
-        challenge: "針對北美當地實際使用情境，保護私人包裹的安全，並透過App遠端提供即時回應機制。"
+        team: "4個開發團隊約 20 人",
+        role: "App整合提案、流程規劃、UI 介面設計",
+        features: ["即時網路威脅監控", "家長控制權限管理", "QoS 優先權設定"],
+        challenge: "整合多個不同開發團隊的功能，規劃出完整的家用Mesh router，減少每年需重複開發與維護的時間。"
       }
     },
     {
@@ -44,18 +44,18 @@ const Portfolio = () => {
       }
     },
     {
-      id: "mesh",
-      route: "/mesh",
-      title: "Mesh router",
-      category: "System / Network",
-      tag: "複雜系統",
-      description: "整合多個不同開發團隊與產品，規劃出完整的Mesh router產品。",
-      icon: <ShieldCheck className="w-6 h-6" />,
+      id: "doorbell",
+      route: "/doorbell",
+      title: "Smart Doorbell App",
+      category: "IoT / Security",
+      tag: "CES 展示作品",
+      description: "針對北美地區設計，優化包裹偵測與安全預警流程。負責 App 流程規劃與 Wireframe 製作。",
+      icon: <Home className="w-6 h-6" />,
       details: {
-        team: "4個開發團隊約 20 人",
-        role: "App整合提案、流程規劃、UI 介面設計",
-        features: ["即時網路威脅監控", "家長控制權限管理", "QoS 優先權設定"],
-        challenge: "結合多個不同開發團隊與產品，規劃出完整的Mesh router產品，減少每年需重複開發與維護的時間。"
+        team: "50人 (含軟硬體、PM、Leader)",
+        role: "App 流程規劃、Wireframe 文件製作",
+        features: ["AI 包裹偵測通知", "自訂偵測區域", "事件紀錄介面"],
+        challenge: "針對北美當地實際使用情境，保護私人包裹的安全，並透過App遠端提供即時回應機制。"
       }
     }
   ];
@@ -142,8 +142,8 @@ const Portfolio = () => {
               讓複雜的功能，<br className="hidden md:block" />
               變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
             </h1>
-            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
-              Hi, 我是 Cindy。在設計時，我花 80% 以上的時間思考如何簡化流程。我擅長將硬體產品、IoT與網通技術轉化為使用者愛不釋手的簡單體驗。
+            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0 font-light">
+              Hi, 我是 Cindy。我相信好的設計來自持續的對話——從產品定位到流程細節，我習慣與團隊反覆溝通，將抽象的需求梳理成清晰易懂的體驗。
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">IoT 智慧家居</span>
@@ -153,24 +153,11 @@ const Portfolio = () => {
           </div>
         </section>
 
-        <section id="projects" className="py-24 bg-white px-6">
+        <section id="projects" className="pt-24 pb-8 bg-white px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center md:text-left mb-16">
+            <div className="text-center md:text-left mb-8">
               <h2 className="text-3xl font-bold mb-4">精選 App 專案 (2022-2025)</h2>
-              <p className="text-slate-500">針對跨團隊合作與 IoT 產品研發，著重互動流程與系統邏輯。</p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {appProjects.map((project) => (
-                <div key={project.id} className="group relative bg-slate-50 rounded-3xl p-8 border border-slate-100 hover:border-orange-200 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500">
-                  <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">{project.icon}</div>
-                  <div className="mb-6 inline-flex items-center px-3 py-1 rounded-full bg-orange-100 text-orange-600 text-xs font-bold uppercase tracking-wider">{project.tag}</div>
-                  <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6">{project.description}</p>
-                  <button onClick={() => scrollTo(`detail-${project.id}`)} className="mt-4 flex items-center text-sm font-bold text-orange-600 group-hover:translate-x-2 transition-transform">
-                    詳細介紹 <ArrowRight className="w-4 h-4 ml-1" />
-                  </button>
-                </div>
-              ))}
+              <p className="text-slate-500">以下介紹三個App開發專案，從概念到實作的完整過程。</p>
             </div>
           </div>
         </section>
@@ -184,16 +171,6 @@ const Portfolio = () => {
                 </div>
                 <div className="w-full md:w-1/2">
                   <div className="flex items-center gap-4 mb-6"><span className="text-4xl font-bold text-orange-200">0{index + 1}</span><h2 className="text-3xl font-bold">{project.title}</h2></div>
-                  <div className="grid grid-cols-2 gap-8 mb-8">
-                    <div className="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                      <h4 className="flex items-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-2"><Users className="w-3 h-3 mr-1" /> 團隊規模</h4>
-                      <p className="text-sm font-bold text-slate-700">{project.details.team}</p>
-                    </div>
-                    <div className="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm">
-                      <h4 className="flex items-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-2"><Layout className="w-3 h-3 mr-1" /> 負責工作</h4>
-                      <p className="text-sm font-bold text-slate-700">{project.details.role}</p>
-                    </div>
-                  </div>
                   <div className="mb-10">
                     <h4 className="text-xs font-bold text-orange-500 uppercase tracking-widest mb-4">核心挑戰</h4>
                     <p className="text-slate-600 leading-relaxed font-medium text-lg border-l-4 border-orange-200 pl-6">{project.details.challenge}</p>
@@ -207,23 +184,27 @@ const Portfolio = () => {
           </section>
         ))}
 
-        <section id="philosophy" className="py-24 px-6 bg-slate-900 text-white relative">
+        <section id="philosophy" className="py-24 px-6 text-slate-700 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(166deg, #DBEAFE 0%, #EDE9FE 100%)', mixBlendMode: 'multiply' }}></div>
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, backgroundSize: '30px 30px' }}></div>
+          </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-orange-500 font-bold tracking-[0.4em] mb-12 uppercase">Design Philosophy</h2>
-            <blockquote className="text-3xl md:text-5xl font-light italic leading-snug mb-12">
+            <h2 className="text-orange-500/80 font-bold tracking-[0.4em] mb-12 uppercase">Design Philosophy</h2>
+            <blockquote className="text-2xl md:text-4xl font-extralight italic leading-loose mb-12 text-slate-700 max-w-3xl mx-auto">
               "最好的設計是感覺不到設計。<br />
-              真正的智慧，應體現在<span className="text-orange-500 font-medium">零干涉</span>的順暢體驗。"
+              真正的智慧，應體現在<span className="text-orange-500/80">零干涉</span>的順暢體驗。"
             </blockquote>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-              我專注於簡化複雜流程，並優化使用者體驗。與其增加操作負擔，我致力於讓技術在後台靜默且高效地運作。
+            <p className="text-slate-500 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+              這是我一直在追求的方向。我喜歡思考如何簡化複雜的流程，不只是讓介面看起來簡單，而是讓使用者不需要多想，就能順著直覺走下去。
             </p>
           </div>
         </section>
 
         <footer className="py-24 px-6 bg-white border-t border-slate-100">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">與我合作？</h2>
-            <p className="text-slate-500 mb-12 text-lg">目前正在尋找 UI/UX 設計的相關挑戰。如果你對我的作品感興趣，歡迎來信討論。</p>
+            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+            <p className="text-slate-500 mb-12 text-lg">目前正在尋找 UI/UX 設計的相關工作。如果你對我的作品感興趣，歡迎與我聯繫。</p>
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
               <a href="mailto:swi963@gmail.com" className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white rounded-full text-xl font-bold hover:bg-orange-600 transition-all shadow-xl shadow-orange-500/20">
                 <Mail className="mr-3" /> swi963@gmail.com
