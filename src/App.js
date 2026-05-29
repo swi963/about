@@ -134,9 +134,10 @@ const Portfolio = () => {
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/30 rounded-full blur-3xl animate-pulse"></div>
             <svg className="absolute top-20 right-[10%] w-24 h-24 text-orange-500/30 animate-[spin_15s_linear_infinite]" viewBox="0 0 100 100"><rect x="25" y="25" width="50" height="50" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
             <svg className="absolute top-1/2 right-[15%] w-8 h-8 text-orange-500/30 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="3" /></svg>
+            <img src="/images/ip.png" alt="" className="absolute bottom-0 right-16 w-auto h-[60%] object-contain object-right-bottom pointer-events-none select-none opacity-90" />
           </div>
 
-          <div className="max-w-4xl mx-auto relative z-10 text-center md:text-left">
+          <div className="max-w-6xl mx-auto relative z-10 text-center md:text-left md:pl-16">
             <h2 className="text-sm font-bold text-orange-600 uppercase tracking-[0.3em] mb-4">UI/UX Designer</h2>
             <h1 className="text-5xl md:text-7xl font-medium mb-8 leading-tight">
               讓複雜的功能，<br className="hidden md:block" />
