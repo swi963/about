@@ -8,7 +8,7 @@ const Visual = () => {
 
   const featuredProject = {
     id: "web-skgas",
-    title: "欣高瓦斯官網改版",
+    title: "欣興天然氣官網",
     category: "Website Redesign / Before & After",
     tag: "官網設計",
     description: "聚焦資訊重整與拍照報度功能優化，讓使用者更快找到常用服務，並提升整體品牌專業度與可讀性。",
