@@ -127,14 +127,14 @@ const Portfolio = () => {
           )}
         </nav>
 
-        <section id="about" className="relative pt-48 pb-32 px-6 overflow-hidden">
+        <section id="about" className="relative pt-32 md:pt-48 pb-32 px-6 overflow-hidden">
           <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(166deg, #FFE0B6 0%, #F3FFDA 100%)', mixBlendMode: 'multiply' }}></div>
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, backgroundSize: '30px 30px' }}></div>
             <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/30 rounded-full blur-3xl animate-pulse"></div>
             <svg className="absolute top-20 right-[10%] w-24 h-24 text-orange-500/30 animate-[spin_15s_linear_infinite]" viewBox="0 0 100 100"><rect x="25" y="25" width="50" height="50" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
             <svg className="absolute top-1/2 right-[15%] w-8 h-8 text-orange-500/30 animate-[spin_10s_linear_infinite]" viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="3" /></svg>
-            <img src="/images/ip.png" alt="" className="absolute bottom-0 right-16 w-auto h-[60%] object-contain object-right-bottom pointer-events-none select-none opacity-90" />
+            <img src="/images/ip.png" alt="" className="absolute bottom-0 left-1/2 -translate-x-1/2 md:left-auto md:right-16 md:translate-x-0 w-auto h-[60%] object-contain object-right-bottom pointer-events-none select-none opacity-90" />
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10 text-center md:text-left md:pl-16">
@@ -143,10 +143,10 @@ const Portfolio = () => {
               讓複雜的功能，<br className="hidden md:block" />
               變得極其<span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">直覺。</span>
             </h1>
-            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
+            <p className="text-xl text-slate-700 max-w-2xl leading-relaxed mb-24 md:mb-10 mx-auto md:mx-0">
               Hi, 我是 Cindy。我相信好的設計來自持續的對話——從產品定位到流程細節，我習慣與團隊反覆溝通，將抽象的需求梳理成清晰易懂的體驗。
             </p>
-            <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="hidden md:flex flex-wrap justify-center md:justify-start gap-4">
               <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">IoT 智慧家居</span>
               <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Wi-Fi Sensing 偵測應用</span>
               <span className="px-4 py-2 bg-white/40 backdrop-blur-md border border-white/20 rounded-full text-sm font-medium">Mesh 介面規劃</span>
