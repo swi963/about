@@ -205,7 +205,7 @@ const Portfolio = () => {
         <footer className="py-24 px-6 bg-white border-t border-slate-100">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Contact</h2>
-            <p className="text-slate-500 mb-12 text-lg">目前正在尋找 UI/UX 設計的相關工作。如果你對我的作品感興趣，歡迎與我聯繫。</p>
+            <p className="text-slate-500 mb-12 text-lg">如果你對我的作品感興趣，歡迎與我聯繫。</p>
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
               <a href="mailto:swi963@gmail.com" className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white rounded-full text-xl font-bold hover:bg-orange-600 transition-all shadow-xl shadow-orange-500/20">
                 <Mail className="mr-3" /> swi963@gmail.com
